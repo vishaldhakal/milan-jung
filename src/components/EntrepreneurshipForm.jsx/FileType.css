@@ -1,0 +1,39 @@
+.cog-icon {
+  width: 2em;
+  height: 2.1em;
+  vertical-align: middle;
+  font-size: 1em;
+  fill: transparent;
+  stroke: currentcolor;
+  stroke-width: 0.9;
+}
+
+.cog-i-file {
+  opacity: 1 !important;
+}
+
+.cog-i-file__extension {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  fill: #fff;
+  text-anchor: middle;
+}
+
+.cog-i-file__color {
+  fill: rgb(198, 33, 40);
+  width: 20px;
+  height: 8.91px;
+}
+
+.cog-i-file__paper {
+  fill: #fff;
+  stroke: #bdcccc;
+  stroke-width: 0.72px;
+}
+
+.cog-i-file__shadow {
+  opacity: 0.4;
+  stroke: #000;
+}

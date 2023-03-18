@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: TimesNew;
+  src: url("./assets/Fonts/times\ new\ roman.ttf");
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: TimesNew;
+}
+
+.overflow_div {
+  overflow-y: hidden !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #005a6d !important;
+}
+
+/* body:has(div.sbldufg_yzaplha)::before {
+  content: "";
+  position: absolute;
+  width: calc(100vw - 20px);
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.8px);
+  z-index: 99999;
+  transition: all 1000ms ease-in-out;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.entrepreneurship_section input[type="file"]::file-selector-button {
+  display: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #005a6d !important;
+}
+
+.menuLine {
+  height: 2px;
+  width: 20px;
+  border-radius: 4px;
+  margin: 4px;
+  background-color: #ecf0f1;
+  color: white;
+  box-sizing: border-box;
+  transition: all 500ms ease-in-out;
+  overflow: hidden;
+}
+
+aside.neeraj {
+  overflow: auto;
+}
+
+aside.neeraj::-webkit-scrollbar {
+  width: 6px;
+}
+
+aside.neeraj::-webkit-scrollbar-thumb {
+  background-color: rgb(105, 105, 0);
+  border-radius: 6px;
+}
+
+svg.loader_svg {
+  width: 16px;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+  margin: 0 auto;
+}
+
+svg.loader_svg circle {
+  fill: none;
+  stroke: white;
+  stroke-width: 2.5;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+
+.peer_to_hover {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+  transition: 400ms ease-in-out;
+  background-color: rgb(243, 244, 246, 0.9);
+  top: 50px;
+}
+
+.peer_hover_main:has(.peer_to_hover:hover) .peer_hovered {
+  background-color: rgba(0, 90, 109);
+  color: white;
+}
+
+.peer_hover_main:hover .peer_to_hover {
+  opacity: 1;
+  top: 40px;
+  visibility: visible;
+}
+
+.sdblqy_xz {
+  top: 90px;
+  position: fixed;
+  right: 35px;
+  transition: all 200ms ease-in-out;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.sdblqy_xz:hover {
+  transform: scale(1.05);
+}

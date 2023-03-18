@@ -1,0 +1,19 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+}
+
+div[contenteditable = "true"]{
+    resize: vertical !important;
+    min-height: 400px;
+}
+
+
+.mainImage:hover .sliderImage{
+    height: 112px  !important;
+}
+
+
+.searchBox{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}

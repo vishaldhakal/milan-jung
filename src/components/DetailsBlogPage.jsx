@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import axiosInstance from "./api/axiosInstance";
-import PageLoader from "./common/Loaders/PageLoader";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axiosInstance from './api/axiosInstance';
+import PageLoader from './common/Loaders/PageLoader';
 
 const DetailedBlogPage = () => {
   const [blogDetail, setBlogDetail] = useState();
@@ -22,7 +22,7 @@ const DetailedBlogPage = () => {
     <>
       <div className="container mt-20 mx-auto min-h-[80vh]">
         <div className="flex flex-col mt-10 mb-6 items-center w-full text-3xl font-bold">
-          <div className="text-dark mt-5 text-4xl mx-10 text-justify">
+          <div className="text-dark mt-5 text-4xl mx-10 ">
             {blogDetail?.title}
           </div>
           <div className="h-[1px] mb-0.5 mt-3 bg-gray-400 w-[50px]"></div>

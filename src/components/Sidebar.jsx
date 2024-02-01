@@ -5,7 +5,7 @@ import { BsTwitter } from "react-icons/bs";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import axiosInstance from "./api/axiosInstance";
 
-const SideBar = ({ setNavbar, navbar, logo, setFreeBook }) => {
+const SideBar = ({ setNavbar, navbar, logo }) => {
   const location = useLocation();
   const [show, setShow] = useState(false);
   const [socialMedia, setSocialMedia] = useState([]);
@@ -165,15 +165,15 @@ const SideBar = ({ setNavbar, navbar, logo, setFreeBook }) => {
             </ul>
           </div>
 
-          <li
+          <Link
+            to="/freebook"
             className="text-sm p-3 truncate text-slate-50  transition duration-300 cursor-pointer"
             onClick={() => {
               setNavbar(false);
-              setTimeout(() => setFreeBook(true), 400);
             }}
           >
             SCHOLARSHIPS
-          </li>
+          </Link>
           {localStorage.getItem("refresh_jung") && (
             <NavLink
               to="/admin-dashboard/profile"

@@ -9,7 +9,6 @@ import { BsTwitter } from 'react-icons/bs';
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
   const [logo, setLogo] = useState();
-  const [freeBook, setFreeBook] = useState(false);
   const [title, setTitle] = useState('');
   const [titleShort, setTitleShort] = useState('');
   const [socialMedia, setSocialMedia] = useState('');
@@ -192,12 +191,12 @@ const NavBar = () => {
               </div>
             </div>
             <div className="hidden xl:flex items-center">
-              <button
-                onClick={() => setFreeBook(true)}
+              <Link
+                to="/freebook"
                 className="bg-green p-2 rounded text-white font-semibold text-sm uppercase hover:bg-normaldark"
               >
                 scholarships
-              </button>
+              </Link>
               {localStorage.getItem('refresh_jung') && (
                 <Link
                   to="/admin-dashboard/profile"
@@ -210,13 +209,11 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <BookModal freeBook={freeBook} setFreeBook={setFreeBook} />
 
       <SideBar
         logo={logo}
         navbar={navbar}
         setNavbar={setNavbar}
-        setFreeBook={setFreeBook}
       />
     </>
   );

@@ -4,6 +4,7 @@ import { redirect, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import axiosInstance from "./api/axiosInstance";
 import { regularExpression } from "./common/RegularExpression";
+import BookModal from "./common/BookModal";
 
 const QuestionsPage = () => {
   //Form fields
@@ -19,6 +20,8 @@ const QuestionsPage = () => {
   const [answer, setAnswer] = useState();
 
   const [showQuestions, setShowQuestion] = useState(false);
+
+  const [isGraduated, setIsGraduated] = useState(true);
 
   //State for validation of form
   const [dataCheck, setDataCheck] = useState(false);
@@ -134,8 +137,11 @@ const QuestionsPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+
+  
   return (
     <>
+    <BookModal freeBook={isGraduated} setFreeBook={setIsGraduated} />
       <ToastContainer
         position="top-center"
         autoClose={1000}

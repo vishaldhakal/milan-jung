@@ -50,47 +50,34 @@ const Blog = () => {
                 <PageLoader />
               </div>
             )}
-            <div className="text-center gap-10 mx-auto flex flex-wrap w-fit items-center justify-center">
-              {blogs?.map((blog, index) => {
-                const { id, image, author, created_at, title, content, slug } =
-                  blog;
-                return (
-                  <Link to={`/blog/${slug}`} key={id}>
-                    <div className="w-[360px] shadow-[rgba(0,0,0,0.24)_0px_3px_8px] md:w-[320px] mx-auto  h-96 md:h-[370px] rounded-lg  overflow-hidden cursor-pointer flex flex-col justify-between">
-                      <div>
-                        <div className="relative object-cover">
-                          <img
-                            alt="Blogs"
-                            className="rounded-t-lg w-full h-48 md:h-44 object-cover"
-                            src={image}
-                          />
-                          {/* <span className="bg-midgreen text-sm text-white font-medium px-1.5 py-0.5 rounded-r absolute bottom-0 left-0">
-                            By {author}
-                          </span>
-                          <span className="absolute text-sm	 right-0 bottom-0 bg-midgreen text-white font-medium px-1.5 py-0.5 rounded-l">
-                            {created_at.slice(0, 10)}
-                          </span> */}
-                        </div>
-                        <div className="py-4 px-2">
-                          <h2 className="w-full text-lg font-semibold line-clamp-4">
-                            {title}
-                          </h2>
-                          {/* <p className="mt-2 line-clamp-3 break-words">
-                            {content.replace(/(<\/?.+?>|&[a-z]+;)/gi, "")}
-                          </p> */}
-                        </div>
-                      </div>
-
-                      <div>
-                        <button className="rounded mb-4 text-center p-2 bg-darkgreen hover:bg-normaldark text-sm text-white font-medium">
-                          Read More
-                        </button>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
+            <div class="grid max-w-md grid-cols-1 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-3 gap-x-16 gap-y-12">
+          {blogs?.map((blog, index) => {
+            const { id, image, author, created_at, title,  slug } =
+              blog;
+            return (
+              <Link to={`/blog/${slug}`} key={id}>
+                <div className="border border-gray-200 rounded-lg overflow-hidden
+                transition duration-500 ease-in-out transform hover:scale-105">
+                  <img class="object-cover w-full h-full" src={image} alt="" />
+                  <div className="p-4">
+                    <p class="mt-6 text-xl font-semibold"> {title}</p>
+                    <div class="h-0 mt-6 mb-4 border-t-2 border-gray-200 border-dashed"></div>
+                    <span class="block text-sm font-bold tracking-widest text-gray-500 uppercase">
+                      {author} <br />
+                    </span>
+                    <p class="mt-4 text-base leading-relaxed text-gray-600">
+                      {new Date(created_at).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
           </div>
         </div>
         {count > 1 && (

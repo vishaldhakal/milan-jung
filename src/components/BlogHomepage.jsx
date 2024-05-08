@@ -24,8 +24,7 @@ const BlogHomepage = () => {
             Latest from blog
           </h2>
           <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis.
+          Read our latest blog posts and news.
           </p>
         </div>
         <div class="grid max-w-md grid-cols-1 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-3 gap-x-16 gap-y-12">
@@ -60,7 +59,7 @@ const BlogHomepage = () => {
           to="/blogs"
           className="mt-7 flex justify-center gap-1 font-semibold"
         >
-          {blogs?.length > 4 && (
+          {blogs?.length >= 4 && (
             <button
               type="button"
               className="border-2 transition duration-500 ease-in-out bg-midgreen p-3 hover:bg-normaldark text-white rounded"

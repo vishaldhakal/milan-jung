@@ -17,76 +17,60 @@ const BlogHomepage = () => {
     getBlogs();
   }, []);
   return (
-    <>
-      <div className="container my-10 px-5 mx-auto " id="blogSection">
-        <div className="flex flex-col mt-10 mb-6 items-center w-full text-3xl font-bold">
-          <div className="text-dark">Articles</div>
-          <div className="h-[1px] mb-0.5 mt-3 bg-gray-400 w-[50px]"></div>
-          <div className="h-[1px] bg-gray-400 w-[50px]"></div>
+    <section class="py-10 bg-white sm:py-16 lg:py-24">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+            Latest from blog
+          </h2>
+          <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis.
+          </p>
         </div>
-        <div className="text-base text-[#666]">
-          <div
-            className={`mt-14 mx-auto items-center text-center gap-6 flex flex-wrap justify-around `}
-          >
-            {blogs?.slice(0, 3)?.map((blog, index) => {
-              const { id, image, author, created_at, title, content, slug } =
-                blog;
-              return (
-                <Link to={`/blog/${slug}`} key={id}>
-                  <div className="w-[380px] shadow-[rgba(0,0,0,0.24)_0px_3px_8px] mx-auto h-96 rounded-lg overflow-hidden cursor-pointer flex flex-col justify-between">
-                    <div>
-                      <div className="relative object-cover">
-                        <img
-                          alt="Blog"
-                          className="rounded-t-lg w-full h-48 object-cover"
-                          src={image}
-                        />
-                        {/* <span className="bg-midgreen text-sm text-white font-medium px-1.5 py-0.5 rounded-r absolute bottom-0 left-0">
-                            By {author}
-                          </span>
-                          <span className="absolute text-sm	 right-0 bottom-0 bg-midgreen text-white font-medium px-1.5 py-0.5 rounded-l">
-                            {created_at.slice(0, 10)}
-                          </span> */}
-                      </div>
-                      <div className="py-4 px-2">
-                        <h2 className="w-full text-lg font-semibold line-clamp-4">
-                          {title}
-                        </h2>
-                        {/* <p className="mt-2 line-clamp-3 break-words text-justify">
-                          {content.replace(/(<\/?.+?>|&[a-z]+;)/gi, "")}
-                        </p> */}
-                      </div>
-                    </div>
-
-                    <div>
-                      <button
-                        type="button"
-                        className="rounded mb-4 p-2 bg-darkgreen hover:bg-normaldark text-sm text-white font-medium"
-                      >
-                        Read More
-                      </button>
-                    </div>
+        <div class="grid max-w-md grid-cols-1 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-3 gap-x-16 gap-y-12">
+          {blogs?.slice(0, 3)?.map((blog, index) => {
+            const { id, image, author, created_at, title, content, slug } =
+              blog;
+            return (
+              <Link to={`/blog/${slug}`} key={id}>
+                <div className="border border-gray-200 rounded-lg overflow-hidden
+                transition duration-500 ease-in-out transform hover:scale-105">
+                  <img class="object-cover w-full h-full" src={image} alt="" />
+                  <div className="p-4">
+                    <p class="mt-6 text-xl font-semibold"> {title}</p>
+                    <div class="h-0 mt-6 mb-4 border-t-2 border-gray-200 border-dashed"></div>
+                    <span class="block text-sm font-bold tracking-widest text-gray-500 uppercase">
+                      {author} <br />
+                    </span>
+                    <p class="mt-4 text-base leading-relaxed text-gray-600">
+                      {new Date(created_at).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </p>
                   </div>
-                </Link>
-              );
-            })}
-          </div>
-          <Link
-            to="/blogs"
-            className="mt-7 flex justify-center gap-1 font-semibold"
-          >
-            {blogs?.length > 4 && (
-              <button
-                type="button"
-                className="border-2 transition duration-500 ease-in-out bg-midgreen p-3 hover:bg-normaldark text-white rounded"
-              >
-                READ MORE
-              </button>
-            )}
-          </Link>
+                </div>
+              </Link>
+            );
+          })}
         </div>
+        <Link
+          to="/blogs"
+          className="mt-7 flex justify-center gap-1 font-semibold"
+        >
+          {blogs?.length > 4 && (
+            <button
+              type="button"
+              className="border-2 transition duration-500 ease-in-out bg-midgreen p-3 hover:bg-normaldark text-white rounded"
+            >
+              READ MORE
+            </button>
+          )}
+        </Link>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -169,11 +169,11 @@ const ContactUs = () => {
                     />
                   </svg>
                   <p class="mt-6 text-lg font-medium text-gray-900">
-                    {/* // milankatuwal333@gmail.com */}
+                    {/* // katuwal@udel.edu */}
                     <a 
                     className="text-blue-600 hover:text-blue-800"
-                    href="mailto:milankatuwal333@gmail.com">
-                      milankatuwal333@gmail.com
+                    href="mailto:katuwal@udel.edu">
+                      katuwal@udel.edu
                     </a>
                   </p>
                 </div>

@@ -41,18 +41,14 @@ const Description = () => {
     <div class="container px-4 mx-auto sm:px-6 lg:px-8">
         <div class="mx-auto text-left md:max-w-lg lg:max-w-2xl md:text-center">
             <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
-                I am on a mission to
-                <span class="relative inline-block">
-                    <span class="absolute inline-block w-full h-2 bg-midgreen bottom-1.5"></span>
-                    <span class="relative"> change the world </span>
-                </span>
+            राष्ट्र। संस्कृति। प्रगति। पुँजी।
             </h2>
         </div>
 
         <div class="grid grid-cols-1 mt-8 md:mt-20 gap-y-6 md:grid-cols-2 gap-x-10">
             <div className="text-center">
                 <img class="w-full mx-auto rounded-tr-extralarge rounded-bl-extralarge sm:max-w-xs" src={aboutImages} alt="" />
-                <p class="mt-6 text-base leading-relaxed text-gray-600">
+                <p class="mt-6 text-xl font-bold leading-relaxed text-gray-600">
                   Milan Jung Katuwal
                 </p>
                 <p>

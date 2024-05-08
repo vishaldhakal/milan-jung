@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axiosInstance from './api/axiosInstance';
 import PageLoader from './common/Loaders/PageLoader';
+import BlogHomepage from './BlogHomepage';
 
 const DetailedBlogPage = () => {
   const [blogDetail, setBlogDetail] = useState();
@@ -60,6 +61,7 @@ const DetailedBlogPage = () => {
           ></div>
         </div>
       </div>
+      <BlogHomepage/>
     </>
   );
 };

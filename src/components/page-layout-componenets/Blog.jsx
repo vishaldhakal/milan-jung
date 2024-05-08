@@ -34,11 +34,15 @@ const Blog = () => {
   }, [currentButton]);
   return (
     <>
-      <div className="container mx-auto min-h-[90vh]">
-        <div className="flex flex-col mt-10 items-center w-full text-3xl font-bold">
-          <div className="text-dark">ARTICLES</div>
-          <div className="h-[1px] mb-0.5 mt-3 bg-gray-400 w-[50px]"></div>
-          <div className="h-[1px] bg-gray-400 w-[50px]"></div>
+      <section class="py-10 bg-white sm:py-16 lg:py-24">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
+            Latest from blog
+          </h2>
+          <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
+          Read our latest blog posts and news.
+          </p>
         </div>
         <div className="py-2 mx-4 sm:mx-6 md:mx-8 xl:mx-14 text-base text-[#666]">
           <div className="my-7">
@@ -50,7 +54,7 @@ const Blog = () => {
                 <PageLoader />
               </div>
             )}
-            <div class="grid max-w-md grid-cols-1 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-3 gap-x-16 gap-y-12">
+            <div class="grid max-w-md grid-cols-1 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-3 gap-8">
           {blogs?.map((blog, index) => {
             const { id, image, author, created_at, title,  slug } =
               blog;
@@ -91,7 +95,8 @@ const Blog = () => {
             />
           </div>
         )}
-      </div>
+        </div>
+        </section>
     </>
   );
 };

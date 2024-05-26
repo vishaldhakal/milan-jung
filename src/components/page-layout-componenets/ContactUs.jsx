@@ -202,7 +202,7 @@ const ContactUs = () => {
                     />
                   </svg>
                   <p class="mt-6 text-lg font-medium leading-relaxed text-gray-900">
-                  Bharatpur 12, Chitwan, Bagmati Province, Nepal
+                  Nepal
                   </p>
                 </div>
               </div>

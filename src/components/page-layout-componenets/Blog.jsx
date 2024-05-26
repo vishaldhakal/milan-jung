@@ -40,9 +40,6 @@ const Blog = () => {
           <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
             Latest from blog
           </h2>
-          <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
-          Read our latest blog posts and news.
-          </p>
         </div>
         <div className="py-2 mx-4 sm:mx-6 md:mx-8 xl:mx-14 text-base text-[#666]">
           <div className="my-7">
@@ -65,17 +62,6 @@ const Blog = () => {
                   <img class="object-cover w-full h-full" src={image} alt="" />
                   <div className="p-4">
                     <p class="mt-6 text-xl font-semibold"> {title}</p>
-                    <div class="h-0 mt-6 mb-4 border-t-2 border-gray-200 border-dashed"></div>
-                    <span class="block text-sm font-bold tracking-widest text-gray-500 uppercase">
-                      {author} <br />
-                    </span>
-                    <p class="mt-4 text-base leading-relaxed text-gray-600">
-                      {new Date(created_at).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </p>
                   </div>
                 </div>
               </Link>

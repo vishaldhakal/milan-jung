@@ -138,7 +138,7 @@ const NavBar = () => {
                       : 'py-2 px-2.5 mx-0.5 text-sm font-semibold hover:bg-normaldark rounded-sm hover:text-white'
                   }
                 >
-                  NATIONAL PODCAST
+                  VIDEOS
                 </NavLink>
 
                 <div className="relative peer_hover_main">

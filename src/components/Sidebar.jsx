@@ -108,7 +108,7 @@ const SideBar = ({ setNavbar, navbar, logo }) => {
             to="/videos"
             className={({ isActive }) => (isActive ? active : inActive)}
           >
-            NATIONAL PODCAST
+            VIDEOS
           </NavLink>
 
           <div className="relative">

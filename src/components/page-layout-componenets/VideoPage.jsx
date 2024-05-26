@@ -53,7 +53,7 @@ const VideoPage = () => {
       )}
       <div className="container mx-auto min-h-[80vh]">
         <div className="flex flex-col mt-10 mb-6 items-center w-full text-xl md:text-3xl font-bold">
-          <div className="text-dark">THE NATIONAL PODCAST</div>
+          <div className="text-dark">VIDEOS</div>
           <div className="h-[1px] mb-0.5 mt-3 bg-gray-400 w-[50px]"></div>
           <div className="h-[1px] bg-gray-400 w-[50px]"></div>
         </div>

@@ -21,7 +21,7 @@ const Videos = ({ handleModalOpen }) => {
     <>
       <div className="mt-10 container px-5 mx-auto" id="videoSection">
         <div className="flex flex-col  mb-6 items-center w-full text-3xl font-bold">
-          <div className="text-dark">THE NATIONAL PODCAST</div>
+          <div className="text-dark">VIDEOS</div>
           <div className="h-[1px] mb-0.5 mt-3 bg-gray-400 w-[50px]"></div>
           <div className="h-[1px] bg-gray-400 w-[50px]"></div>
         </div>

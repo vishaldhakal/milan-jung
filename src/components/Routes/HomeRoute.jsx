@@ -1,17 +1,18 @@
 import * as React from "react";
-import { Form, Route, Routes } from "react-router-dom";
-import ErrorPage from "../ErrorPage";
-import Blog from "../page-layout-componenets/Blog";
-import AdminLogin from "../page-layout-componenets/AdminLogin";
-import VideoPage from "../page-layout-componenets/VideoPage";
-import QuestionsPage from "../QuestionsPage";
-import NavBar from "../Navbar";
-import Footer from "../Footer";
+import { Route, Routes } from "react-router-dom";
 import DetailedBlogPage from "../DetailsBlogPage";
-import AboutUs from "../page-layout-componenets/AboutUs";
 import Page from "../EntrepreneurshipForm.jsx/Page";
-import SummitEvent from "../page-layout-componenets/SummitEvent";
+import ErrorPage from "../ErrorPage";
+import Footer from "../Footer";
+import NavBar from "../Navbar";
+import QuestionsPage from "../QuestionsPage";
 import PageLoader from "../common/Loaders/PageLoader";
+import AboutUs from "../page-layout-componenets/AboutUs";
+import Blog from "../page-layout-componenets/Blog";
+import SummitEvent from "../page-layout-componenets/SummitEvent";
+import VideoPage from "../page-layout-componenets/VideoPage";
+import Gallery from "../Gallery";
+// import Gallery from "../Gallery";
 const HomePage = React.lazy(() => import("../Homepage"));
 
 const HomeRoute = () => {
@@ -49,6 +50,7 @@ const HomeRoute = () => {
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blog/:slug" element={<DetailedBlogPage />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/videos" element={<VideoPage />} />
         <Route
           path="/civicengagement&initiative/pitch_competition"

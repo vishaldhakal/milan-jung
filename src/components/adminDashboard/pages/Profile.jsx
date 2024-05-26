@@ -27,7 +27,7 @@ const Profile = () => {
         setLogo(Object?.values(data?.data[0])?.slice(1)[0]);
         setLogoID(Object?.values(data?.data[0])?.[0]);
       })
-      .catch((err) => {});
+      .catch(() => {});
   };
 
   const updateLogo = (image) => {
@@ -35,8 +35,8 @@ const Profile = () => {
     formData.append("image", image);
     axiosImageInstance
       .patch(`/cms/logo-image-update/${logoID}/`, formData)
-      .then((response) => getLogo())
-      .catch((err) => {});
+      .then(() => getLogo())
+      .catch(() => {});
   };
 
   const getDetails = () => {
@@ -61,7 +61,7 @@ const Profile = () => {
   }, []);
   const updateDetails = (e) => {
     e.preventDefault();
-    const { ExUsername, ExEmail, ExPhoneNumber } = regularExpression;
+    const { ExEmail } = regularExpression;
     let dataCheck = false;
 
     if (!email) {
@@ -91,7 +91,7 @@ const Profile = () => {
     uploadImage && formData.append("slogan_image", uploadImage);
     axiosImageInstance
       .patch(`/auth/user-update/${userID}/`, formData)
-      .then((data) => {
+      .then(() => {
         toast.success("Sucessfully Updated");
         setLoader(false);
       })

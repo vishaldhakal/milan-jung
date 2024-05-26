@@ -35,6 +35,8 @@ const DashBoardRoute = () => {
       <Route path="students" element={<Students />} />
       <Route path="questions" element={<Questions />} />
       <Route path="/entrepreneurship" element={<Entrepreneurship />} />
+      <Route path="/gallery" element={<Entrepreneurship />} />
+      <Route path="/gallery-add" element={<Entrepreneurship />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );

@@ -8,7 +8,6 @@ import { IoMdContact } from "react-icons/io";
 import { MdOutlineArticle } from "react-icons/md";
 import { SlSocialBehance } from "react-icons/sl";
 import { CgProfile } from "react-icons/cg";
-import { FcIdea } from "react-icons/fc";
 import { TbBulb } from "react-icons/tb";
 import {
   AiFillHome,
@@ -19,6 +18,7 @@ import {
 } from "react-icons/ai";
 import { FaUserFriends } from "react-icons/fa";
 import { RiQuestionAnswerLine, RiLockPasswordFill } from "react-icons/ri";
+import { GiIdea } from "react-icons/gi";
 
 const SideBar = ({ isMenuOpen }) => {
   let sidebarItemss = [
@@ -69,6 +69,24 @@ const SideBar = ({ isMenuOpen }) => {
           icon: <TbBulb size={16} />,
           link: "/admin-dashboard/entrepreneurship",
         },
+      ],
+    },
+    {
+      title: "Gallery",
+      icon: <BsImages size={20} />,
+      clicked: false,
+      subItems: [
+        {
+          title: "Gallery List",
+          icon: <BsImages size={16} />,
+          link: "/admin-dashboard/gallery",
+        },
+        {
+          title: "Add Image",
+          icon: <AiOutlineFileAdd size={16} />,
+          link: "/admin-dashboard/gallery-add",
+        },
+
       ],
     },
     {

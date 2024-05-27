@@ -52,7 +52,7 @@ const BlogPosts = () => {
       setItemsPerPage(countItemsOnPage);
       setCount(Math.ceil(TotalCount / countItemsOnPage));
       setLoader(false);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   useEffect(() => {
@@ -123,9 +123,8 @@ const BlogPosts = () => {
                     onClick={() => {
                       setIsActive(isActive === 2 ? 0 : isActive + 1);
                     }}
-                    className={`${
-                      isActive !== 0 && "bg-gray-200"
-                    } text-base font-bold text-gray-500 px-3 py-4 text-left flex items-center cursor-pointer`}
+                    className={`${isActive !== 0 && "bg-gray-200"
+                      } text-base font-bold text-gray-500 px-3 py-4 text-left flex items-center cursor-pointer`}
                   >
                     Title
                     <span className="ml-3 flex">
@@ -213,8 +212,8 @@ const BlogPosts = () => {
                       <td className=" text-gray-600 font-normal px-2 py-2 whitespace-nowrap">
                         {blog.content.length > 30
                           ? `${content
-                              .replace(/(<\/?.+?>|&[a-z]+;)/gi, "")
-                              .slice(0, 30)}....`
+                            .replace(/(<\/?.+?>|&[a-z]+;)/gi, "")
+                            .slice(0, 30)}....`
                           : content.replace(/(<\/?.+?>|&[a-z]+;)/gi, "")}
                       </td>
                       <td className="text-left text-gray-600 font-normal px-2 py-2 whitespace-nowrap">

@@ -131,6 +131,16 @@ const NavBar = () => {
                   ARTICLES
                 </NavLink>
                 <NavLink
+                  to="gallery"
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'py-2 px-2.5 mx-0.5 text-sm font-semibold bg-normaldark rounded-sm text-white'
+                      : 'py-2 px-2.5 mx-0.5 text-sm font-semibold hover:bg-normaldark rounded-sm hover:text-white'
+                  }
+                >
+                  GALLERY
+                </NavLink>
+                <NavLink
                   to="videos"
                   className={({ isActive }) =>
                     isActive

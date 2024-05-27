@@ -14,7 +14,7 @@ const Gallery = () => {
     }
         , {
         title: 'Hello World',
-        image: '/blog1.jpg',
+        image: '/logo512.png',
         description: 'lorem ipsum ascws sder ger g erg erg ipsum ascws sder ger g erg ergipsum ascws sder ger g erg ergipsum ascws sder ger g erg erg'
     },
     {
@@ -95,7 +95,9 @@ const Gallery = () => {
                     </div>
                 </div>
                 <div className="flex justify-center items-center mt-24">
-                    <button className="button flex justify-center items-center text-center text-white w-28 bg-[#005A6D] rounded-md p-2 hover:shadow-2xl hover:bg-[#3b8391]">View all</button>
+                    <a href="#">
+                        <button className="button flex justify-center items-center text-center text-white w-28 bg-[#005A6D] rounded-md p-2 hover:shadow-2xl hover:bg-[#3b8391]">View all</button>
+                    </a>
                 </div>
             </div>
 

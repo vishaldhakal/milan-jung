@@ -12,6 +12,7 @@ import Blog from "../page-layout-componenets/Blog";
 import SummitEvent from "../page-layout-componenets/SummitEvent";
 import VideoPage from "../page-layout-componenets/VideoPage";
 import Gallery from "../Gallery";
+import GalleryView from "../GalleryView";
 // import Gallery from "../Gallery";
 const HomePage = React.lazy(() => import("../Homepage"));
 
@@ -50,7 +51,7 @@ const HomeRoute = () => {
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blog/:slug" element={<DetailedBlogPage />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery" element={<GalleryView viewAll={true} />} />
         <Route path="/videos" element={<VideoPage />} />
         <Route
           path="/civicengagement&initiative/pitch_competition"

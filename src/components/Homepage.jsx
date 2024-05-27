@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import Description from "./Description";
-import ShowcaseBanner from "./ShowCaseBanner";
-import MainSlider from "./MainSlider";
-import Videos from "./Videos";
-import BlogHomepage from "./BlogHomepage";
-import PageLoader from "./common/Loaders/PageLoader";
-import ContactUs from "./page-layout-componenets/ContactUs";
-import VideoModal from "./common/videoModal";
+import React, { useEffect, useState } from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
+import BlogHomepage from "./BlogHomepage";
+import Description from "./Description";
+import GalleryView from "./GalleryView";
+import MainSlider from "./MainSlider";
+import ShowcaseBanner from "./ShowCaseBanner";
+import Videos from "./Videos";
+import VideoModal from "./common/videoModal";
+import ContactUs from "./page-layout-componenets/ContactUs";
 
 const HomePage = ({ setBlogID, blogID }) => {
   // Video Loader Section
@@ -32,7 +32,7 @@ const HomePage = ({ setBlogID, blogID }) => {
       <MainSlider />
       <Description />
       <BlogHomepage setBlogID={setBlogID} blogID={blogID} />
-      
+      <GalleryView viewAll={false} />
       <ShowcaseBanner />
       <Videos handleModalOpen={handleModalOpen} />
       <ContactUs />

@@ -51,11 +51,11 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="w-full bg-gray-100 h-20 bg-opacity-90 top-0 z-30 sticky left-0 pt-1  ">
+      <div className="w-full bg-gray-100 h-16 md:h-20 bg-opacity-90 top-0 z-30 sticky left-0 pt-1  ">
         <div className="max-w-[2000px] px-3 sm:px-5 lg:px-5 mx-auto">
           <div className="flex justify-between mb-3 pt-2 lg:px-2 flex-wrap  w-full">
             <div className="flex items-center px-0 md:pr-4">
-              <span className="w-12 h-12 shrink-0 rounded-full overflow-hidden mr-4">
+              <span className="w-10 h-10 md:w-12 md:h-12  shrink-0 rounded-full overflow-hidden mr-4">
                 <img
                   className="h-full w-full object-cover text-gray-700 text-sm font-medium"
                   src={logo}
@@ -63,12 +63,12 @@ const NavBar = () => {
                 />
               </span>
               <div
-                className={`max-w-full w-full  ${
-                  localStorage.getItem('refresh_jung') &&
+                className={`hidden md:block max-w-full w-full  ${localStorage.getItem('refresh_jung') &&
                   'xl:max-w-[160px] 2xl:max-w-[350px]'
-                } text-lg lg:text-xl flex items-center text-gray-600 font-bold`}
+                  } text-lg lg:text-xl flex items-center text-gray-600 font-bold`}
               >
                 {title}
+
                 {socialMedia && (
                   <a
                     target="_blank"
@@ -153,15 +153,14 @@ const NavBar = () => {
 
                 <div className="relative peer_hover_main">
                   <div
-                    className={`${
-                      (location?.pathname ===
-                        '/civicengagement&initiative/pitch_competition' ||
-                        location?.pathname ===
-                          '/civicengagement&initiative/pitch_competition' ||
-                        location?.pathname ===
-                          '/civicengagement&initiative/youth_impact_summit') &&
+                    className={`${(location?.pathname ===
+                      '/civicengagement&initiative/pitch_competition' ||
+                      location?.pathname ===
+                      '/civicengagement&initiative/pitch_competition' ||
+                      location?.pathname ===
+                      '/civicengagement&initiative/youth_impact_summit') &&
                       'bg-normaldark text-white'
-                    } uppercase peer_hovered py-2 px-2.5 mx-0.5 font-semibold hover:bg-normaldark rounded-sm hover:text-white`}
+                      } uppercase peer_hovered py-2 px-2.5 mx-0.5 font-semibold hover:bg-normaldark rounded-sm hover:text-white`}
                   >
                     Civic Engagement
                   </div>

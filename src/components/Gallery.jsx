@@ -38,18 +38,16 @@ const Gallery = ({ viewAll }) => {
     // }
 
     return (
-        <section class="py-10 bg-white sm:py-16 lg:pt-24">
+        <section class="py-10 bg-white sm:py-16 sm:pt-8 lg:pt-24 lg:pb-8">
             <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <div class="max-w-2xl mx-auto text-center">
                     <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
                         My Gallery
                     </h2>
                 </div>
-
                 <div className="mt-12">
-
                     <div className="gap-12">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 ">
+                        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 mx-auto max-w-md lg:max-w-full gap-12 ">
                             {!viewAll ?
                                 (dummyData.slice(0, 3).map((item, index) => {
                                     return (

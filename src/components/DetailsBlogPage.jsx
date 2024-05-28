@@ -27,33 +27,34 @@ const DetailedBlogPage = () => {
 
   return (
     <>
-      <div className="container px-12 mt-20 mx-auto min-h-[80vh]">
-        <div className="flex justify-left mb-4  mx-20">
-          <ul className='flex justify-left items-center'>
+      <div className="container px-12 mt-20 sm:mx-auto min-h-[80vh]">
+        <div className="flex lg:mb-4  lg:mx-20">
+          <ul className='flex flex-col sm:flex-row'>
 
-            <li className='text-xs font-semibold mx-1 hover:underline'>
-              <a href="/" className=''>Home</a>
-            </li>
-
-            <img src="/right-2-svgrepo-com.svg" alt="back" className='h-5' />
-
-            <li className='text-xs font-semibold mx-1 hover:underline'>
-              <a href="/">Blog</a>
-            </li>
-
-            <img src="/right-2-svgrepo-com.svg" alt="back" className='h-5' />
-            <span>
-              <svg className="svg minearr size-3" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M17.65 16.513l-7.147-7.055 1.868-1.893 9.068 8.951-9.069 8.927-1.866-1.896z" fill="#869099"></path></svg>
+            <span className='flex '>
+              <li className='text-xs font-semibold mx-1 hover:underline'>
+                <a href="/" className=''>Home</a>
+              </li>
+              <img src="/right-2-svgrepo-com.svg" alt="back" className='h-5' />
             </span>
 
-            <li className='text-xs font-semibold mx-1 hover:underline'>
-              <a href="#">{blogDetail.title}</a>
-            </li>
+            <span className='flex '>
+              <li className='text-xs font-semibold mx-1 hover:underline'>
+                <a href="/">Blog</a>
+              </li>
+              <img src="/right-2-svgrepo-com.svg" alt="back" className='h-5' />
+            </span>
 
+            <span className='flex '>
+              <li className='text-xs font-semibold mx-1 hover:underline'>
+                <a href="#">{blogDetail.title}</a>
+              </li>
+            </span>
+            
           </ul>
         </div>
 
-        <div className="flex flex-col mt-10 mb-6 mx-20  text-3xl">
+        <div className="flex flex-col mt-10 mb-6 lg:mx-20  text-3xl">
           <div className="text-dark flex items-center mt-5 text-4xl font-extrabold ">
             {blogDetail?.title}
           </div>
@@ -98,8 +99,8 @@ const DetailedBlogPage = () => {
             </div>
           </div>
         </div>
-        <div className="my-2 text-base mx-20 text-[#666]">
-          <div className="max-h-[600px] min-h-[400px] overflow-hidden my-2 rounded-lg">
+        <div className="my-2 text-base lg:mx-20 text-[#666]">
+          <div className="max-h-[600px] min-h-[200px] overflow-hidden my-2 rounded-lg">
             <img
               className="w-full object-cover h-full  overflow-hidden"
               src={blogDetail?.image}

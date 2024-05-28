@@ -39,7 +39,7 @@ const Description = () => {
   ) : (
     <section class="py-10 bg-white sm:py-16 lg:py-24">
     <div class="container px-4 mx-auto sm:px-6 lg:px-8">
-        <div class="mx-auto text-left md:max-w-lg lg:max-w-2xl md:text-center">
+        <div class="mx-auto md:max-w-lg lg:max-w-2xl text-center">
             <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
             राष्ट्र। संस्कृति। प्रगति। पुँजी।
             </h2>

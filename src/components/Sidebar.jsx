@@ -24,9 +24,9 @@ const SideBar = ({ setNavbar, navbar, logo }) => {
     if (
       (location?.pathname === "/civicengagement&initiative/pitch_competition" ||
         location?.pathname ===
-          "/civicengagement&initiative/pitch_competition" ||
+        "/civicengagement&initiative/pitch_competition" ||
         location?.pathname ===
-          "/civicengagement&initiative/youth_impact_summit") &&
+        "/civicengagement&initiative/youth_impact_summit") &&
       navbar === true
     ) {
       setShow(true);
@@ -105,6 +105,12 @@ const SideBar = ({ setNavbar, navbar, logo }) => {
             ARTICLES
           </NavLink>
           <NavLink
+            to="/gallery"
+            className={({ isActive }) => (isActive ? active : inActive)}
+          >
+            GALLERY
+          </NavLink>
+          <NavLink
             to="/videos"
             className={({ isActive }) => (isActive ? active : inActive)}
           >
@@ -114,29 +120,26 @@ const SideBar = ({ setNavbar, navbar, logo }) => {
           <div className="relative">
             <div
               onClick={() => setShow(!show)}
-              className={`${
+              className={`${location?.pathname ===
+                "/civicengagement&initiative/pitch_competition" ||
                 location?.pathname ===
-                  "/civicengagement&initiative/pitch_competition" ||
+                "/civicengagement&initiative/pitch_competition" ||
                 location?.pathname ===
-                  "/civicengagement&initiative/pitch_competition" ||
-                location?.pathname ===
-                  "/civicengagement&initiative/youth_impact_summit"
-                  ? "text-slate-200"
-                  : "text-white"
-              } cursor-pointer transition flex items-center space-x-2 uppercase text-sm duration-200 p-3 hover:text-slate-200`}
+                "/civicengagement&initiative/youth_impact_summit"
+                ? "text-slate-200"
+                : "text-white"
+                } cursor-pointer transition flex items-center space-x-2 uppercase text-sm duration-200 p-3 hover:text-slate-200`}
             >
               <span>Civic Engagement</span>
               <BiChevronDown
                 size={18}
-                className={`transition-all duration-500 ${
-                  show && "rotate-180"
-                }`}
+                className={`transition-all duration-500 ${show && "rotate-180"
+                  }`}
               />
             </div>
             <ul
-              className={`shrink-0 transition-all duration-500 overflow-hidden pl-6 pr-3 ${
-                show ? "h-[100px]" : "h-0 opacity-0"
-              }`}
+              className={`shrink-0 transition-all duration-500 overflow-hidden pl-6 pr-3 ${show ? "h-[100px]" : "h-0 opacity-0"
+                }`}
             >
               <NavLink
                 to="civicengagement&initiative/pitch_competition"

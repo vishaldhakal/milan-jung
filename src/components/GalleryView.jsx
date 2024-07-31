@@ -3,7 +3,8 @@ import Gallery from './Gallery'
 
 const GalleryView = ({ viewAll }) => {
     return (
-        <div className='mb-24 '>
+        <>
+        {/* <div className='mb-24 '>
             <Gallery viewAll={viewAll} />
             {!viewAll && <div className="flex justify-center items-center ">
                 <a href="/gallery">
@@ -15,7 +16,8 @@ const GalleryView = ({ viewAll }) => {
                     </button>
                 </a>
             </div>}
-        </div>
+        </div> */}
+        </>
     )
 }
 

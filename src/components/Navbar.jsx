@@ -130,7 +130,7 @@ const NavBar = () => {
                 >
                   ARTICLES
                 </NavLink>
-                {/* <NavLink
+                <NavLink
                   to="gallery"
                   className={({ isActive }) =>
                     isActive
@@ -139,7 +139,7 @@ const NavBar = () => {
                   }
                 >
                   GALLERY
-                </NavLink> */}
+                </NavLink>
                 <NavLink
                   to="videos"
                   className={({ isActive }) =>

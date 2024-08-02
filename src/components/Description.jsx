@@ -47,12 +47,9 @@ const Description = () => {
 
         <div class="grid grid-cols-1 mt-8 md:mt-20 gap-y-6 md:grid-cols-2 gap-x-10">
             <div className="text-center">
-                <img class="w-full mx-auto rounded-tr-extralarge rounded-bl-extralarge sm:max-w-xs" src={aboutImages} alt="" />
+                <img class="w-full mx-auto rounded-tr-[200px] rounded-bl-extralarge sm:max-w-xs" src={aboutImages} alt="" />
                 <p class="mt-6 text-xl font-bold leading-relaxed text-gray-600">
                   Milan Jung Katuwal
-                </p>
-                <p>
-                  <span class="block text-base font-semibold text-black">Founder & CEO</span>
                 </p>
             </div>
 

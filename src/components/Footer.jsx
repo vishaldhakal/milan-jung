@@ -23,7 +23,7 @@ const Footer = () => {
       <div className="py-4 sm:py-5 px-5 xl:px-10 flex items-center bg-normaldark">
         <div className="py-1.5 md:flex text-center w-full grid grid-cols-1 justify-between">
           <div className=" text-gray-300 hover:text-white cursor-pointer">
-            2023 © Milan Katuwal. All Rights Reserved.
+            2024 © Milan Katuwal. All Rights Reserved.
           </div>
           {(socialMedia?.youtube ||
             socialMedia?.facebook ||

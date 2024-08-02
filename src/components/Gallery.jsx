@@ -1,86 +1,70 @@
 import React, { useEffect, useState } from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Navigation } from "swiper";
 
 const Gallery = ({ viewAll }) => {
-    const [isLoading, setIsLoading] = useState(true)
 
     const dummyData = [{
-        title: 'Hello World',
-        image: '/blog1.jpg',
-        description: 'Whole wound wrote at whose to style in. Figure ye innate former do so we. Shutters but sir yourself provided you required his.'
+        title: '',
+        image: 'gallery/1.jpg',
+        description: 'Interviewing a disabled maoist combatant at his home while shooting for a documentary in Thawang, Rolpa, Nepal. (June, 2024)'
     },
     {
-        title: 'Hello World',
-        image: '/blog2.jpg',
-        description: 'Whole wound wrote at whose to style in. Figure ye innate former do so we. Shutters but sir yourself provided you required his.'
+        title: '',
+        image: 'gallery/2.jpg',
+        description: 'Participating in a multi-stakeholder interaction on protecting labor rights and promoting safer migration in Nepal co-organized by the National Policy Forum (NPF). (April, 2024)'
     }
         , {
-        title: 'Hello World',
-        image: '/logo512.png',
-        description: 'Whole wound wrote at whose to style in. Figure ye innate former do so we. Shutters but sir yourself provided you required his.'
+        title: '',
+        image: 'gallery/3.jpg',
+        description: 'Hosting an interaction on “Accountability, Governance, and Protection of Civic Space in Nepal” alongside Nepal Smajbadi Party leader Manushi Yami Bhattarai, Journalist Siromani Dhungana, Civic organization leader Pranav Bhattarai and federalism and governance expert Ramesh Adhikari. (December, 2023)'
     },
     {
-        title: 'Hello World',
-        image: '/blog1.jpg',
-        description: 'Whole wound wrote at whose to style in. Figure ye innate former do so we. Shutters but sir yourself provided you required his.'
+        title: '',
+        image: 'gallery/4.jpg',
+        description: 'At Nepal government’s think tank Policy Research Institute (PRI), taking part in a discussion on Research and Policymaking process with the students of Master’s in Development Studies at the Kathmandu University School of Arts. (January, 2024)'
     }
         , {
-        title: 'Hello World',
-        image: '/blog2.jpg',
-        description: 'Whole wound wrote at whose to style in. Figure ye innate former do so we. Shutters but sir yourself provided you required his.'
+        title: '',
+        image: 'gallery/5.jpg',
+        description: 'Receiving award at a school function while in grade 9 (2012) from the hands of Narayan Prasad Dahal, now the Chairperson of the National Assembly of Nepal.'
     }];
-
-    useEffect(() => {
-        setIsLoading(false);    // Set isLoading to false once the component mounts
-    }, []);
-
-    // if (isLoading) {
-    //     return <h1>Loading.....</h1>;
-    // }
 
     return (
         <section class="py-10 bg-white sm:py-16 sm:pt-8 lg:pt-24 lg:pb-8">
             <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                 <div class="max-w-2xl mx-auto text-center">
                     <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-                        My Gallery
+                        Gallery
                     </h2>
                 </div>
                 <div className="mt-12">
-                    <div className="gap-12">
-                        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 mx-auto max-w-md lg:max-w-full gap-12 ">
-                            {!viewAll ?
-                                (dummyData.slice(0, 3).map((item, index) => {
-                                    return (
-                                        <div className="flex flex-col  rounded-xl">
-                                            <div className="overflow-hidden h-80">
-                                                <img src={item.image} alt="image1" className='rounded-xl object-cover hover:scale-110 transition-all duration-500 cursor-pointer' />
-                                            </div>
-
-                                            <div className="py-2 mt-2">
-                                                <p className='text-lg font-black '>{item.title}</p>
-                                                <p className='text-xs font-medium mt-2'>{item.description.slice(0, 80)} </p>
-                                            </div>
-                                        </div>
-                                    )
-                                })
-                                ) :
-                                (dummyData.map((item, index) => {
-                                    return (
-                                        <div className="flex flex-col  rounded-xl">
-                                            <div className="overflow-hidden h-80">
-                                                <img src={item.image} alt="image1" className='rounded-xl object-cover hover:scale-110 transition-all duration-500 cursor-pointer' />
-                                            </div>
-
-                                            <div className="py-2 mt-2">
-                                                <p className='text-lg font-black '>{item.title}</p>
-                                                <p className='text-xs font-medium mt-2'>{item.description.slice(0, 80)} </p>
-                                            </div>
-                                        </div>
-                                    )
-                                }))
-                            }
-                        </div>
-                    </div>
+                    <Swiper
+                        modules={[Autoplay, Navigation]}
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        autoplay={{
+                            delay: 5500,
+                            disableOnInteraction: false
+                        }}
+                        navigation={true}
+                        className="mySwiper"
+                    >
+                        {dummyData.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="flex flex-col items-center justify-center">
+                                    <img src={item.image} alt={item.title} className="w-full rounded-lg" />
+                                    <div className="mt-4 text-center">
+                                        <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
+                                        <p className="text-gray-600">{item.description}</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </div>
         </section>

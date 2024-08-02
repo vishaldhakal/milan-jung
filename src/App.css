@@ -17,3 +17,12 @@ div[contenteditable = "true"]{
 .searchBox{
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
+
+
+.swiper-button-prev, .swiper-button-next{
+    color: #000000 !important;
+    background-color: rgb(255, 255, 255) !important;
+    padding: 30px 25px !important;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}

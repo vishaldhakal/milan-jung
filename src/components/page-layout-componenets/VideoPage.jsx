@@ -57,14 +57,8 @@ const VideoPage = () => {
           <div className="h-[1px] mb-0.5 mt-3 bg-gray-400 w-[50px]"></div>
           <div className="h-[1px] bg-gray-400 w-[50px]"></div>
         </div>
-        <div className="py-5 mx-4 sm:mx-6 md:mx-8 xl:mx-14 text-base text-[#666]">
-          <div className="m">
-            The National Podcast is a new effort and a premium Nepali podcast to
-            bring youths in the conversations on different subjects and opinions
-            from the streets, villages, cities of Nepal.
-          </div>
-
-          <div className="mt-14">
+        <div className="pb-5 mx-4 sm:mx-6 md:mx-8 xl:mx-14 text-base text-[#666]">
+          <div className="mb-14">
             <div className=" text-center gap-6 mx-auto flex flex-wrap w-fit items-center justify-around">
               {videos?.map((video, index) => {
                 let givenLink = video?.live_link;
@@ -89,15 +83,16 @@ const VideoPage = () => {
                 }
                 return (
                   <div
-                    className="relative w-[300px] sm:w-[380px] md:w-[400px] lg:w-[450px]"
+                    className="relative w-[300px] sm:w-[380px] md:w-[400px] lg:w-[1050px] mb-10"
                     onClick={() => handleModalOpen(finalLink)}
                     key={index}
                   >
                     <div className="rounded-xl overflow-hidden">
                       <iframe
                         onClick={(e) => e.preventDefault()}
-                        className="h-60 w-full"
+                        className="h-[500px] w-full"
                         src={finalLink}
+                        title={video.title}
                       ></iframe>
                     </div>
                     <span className="mb-4 mt-2 line-clamp-1 font-semibold text-center">

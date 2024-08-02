@@ -32,7 +32,7 @@ const HomePage = ({ setBlogID, blogID }) => {
       <MainSlider />
       <Description />
       <BlogHomepage setBlogID={setBlogID} blogID={blogID} />
-      <GalleryView viewAll={false} />
+      <GalleryView viewAll={true} />
       <ShowcaseBanner />
       <Videos handleModalOpen={handleModalOpen} />
       <ContactUs />

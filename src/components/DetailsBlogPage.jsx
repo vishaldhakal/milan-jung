@@ -70,7 +70,6 @@ const DetailedBlogPage = () => {
             <img src="/Milanprof.png" alt="profile" className='rounded-full h-10' />
             <div className="flex flex-col">
               <p className='text-xs font-semibold'>{blogDetail.author}</p>
-              <p className='text-xs font-semibold'>CEO </p>
             </div>
           </div>
 

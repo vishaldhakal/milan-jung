@@ -1,11 +1,4 @@
 import { useEffect } from "react";
-import { FiUpload } from "react-icons/fi";
-import { AiTwotoneCalendar } from "react-icons/ai";
-import { BsClockHistory } from "react-icons/bs";
-import { IoTicketOutline } from "react-icons/io5";
-import { TbHeart } from "react-icons/tb";
-import { TiLocation } from "react-icons/ti";
-import Summit from "../../assets/images/Summit.avif";
 
 const PitchCompetition = () => {
   useEffect(() => {
@@ -14,7 +7,26 @@ const PitchCompetition = () => {
 
   return (
     <>
+      {/* Embedded Youth Conference page: https://youth.nrnusa.org/ */}
       <div className="max-w-[1200px] w-full pt-10 pb-14 mx-auto">
+        <iframe
+          src="https://youth.nrnusa.org/"
+          title="3rd Youth Conference - NRN USA Youth"
+          className="w-full min-h-[80vh] border-0 rounded-3xl overflow-hidden"
+          allowFullScreen
+        />
+      </div>
+
+      {/* --- Commented out: original event layout (image, details, sidebar) --- */}
+      {/* import { FiUpload } from "react-icons/fi";
+      import { AiTwotoneCalendar } from "react-icons/ai";
+      import { BsClockHistory } from "react-icons/bs";
+      import { IoTicketOutline } from "react-icons/io5";
+      import { TbHeart } from "react-icons/tb";
+      import { TiLocation } from "react-icons/ti";
+      import Summit from "../../assets/images/Summit.avif"; */}
+
+      {/* <div className="max-w-[1200px] w-full pt-10 pb-14 mx-auto">
         <div className="relative max-h-[470px] h-full max-w-[1200px] w-full overflow-hidden rounded-3xl">
           <div className="bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 absolute blur-2xl h-full w-full"></div>
           <img
@@ -99,7 +111,6 @@ const PitchCompetition = () => {
               </div>
             </div>
 
-            {/* For Rich Text */}
             <div className="text-[#6f7287] text-[16px] leading-[1.5rem]">
               <div>
                 This conference is targeted towards Nepali students and
@@ -166,7 +177,7 @@ const PitchCompetition = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
